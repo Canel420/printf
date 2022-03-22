@@ -47,10 +47,10 @@ int p_str(va_list s)
  */
 int p_str_r(va_list r)
 {
-	int i, len = 0, len2 = 0;
+	int len = 0, len2 = 0;
 	char *s;
 
-	s = ve_arg(r, char *);
+	s = va_arg(r, char *);
 
 	while (s[len] != '\0')
 	{
