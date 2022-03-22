@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int (*f)(va_list);
 
-	if (format == NULL)
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 	va_start(args, format);
