@@ -31,6 +31,8 @@ int p_str(va_list s)
 	char *str = va_arg(s, char *);
 	int i;
 
+	if (str == NULL)
+		str = "(nill)";
 	for (i = 0 ; str[i]; i++)
 		_putchar(str[i]);
 	return (i);
