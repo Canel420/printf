@@ -77,10 +77,6 @@ int _printf(const char *format, ...)
 				len += f(args);
 				i++;
 			}
-			else
-			{
-				_putchar(format[i]);
-				len++; }
 		}
 		else
 		{
