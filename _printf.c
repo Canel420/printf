@@ -70,13 +70,17 @@ int _printf(const char *format, ...)
 			}
 			if (!format[i + 1])
 				return (-1);
+
 			f = convers(&format[i + 1]);
 			if (f != NULL)
 			{
 				len += f(args);
 				i++;
-				continue;
 			}
+			else
+			{
+				_putchar(format[i]);
+				len++; }
 		}
 		else
 		{
