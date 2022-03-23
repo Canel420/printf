@@ -67,6 +67,12 @@ int _printf(const char *format, ...)
 				i++;
 				len++;
 			}
+			if (format[i + 1] == '\0')
+			{
+				_putchar(format[i]);
+				len++;
+				return (len);
+			}
 			if (!format[i + 1])
 				return (-1);
 			f = convers(&format[i + 1]);
