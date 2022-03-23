@@ -32,7 +32,7 @@ int p_str(va_list s)
 	int i;
 
 	if (str == NULL)
-		str = "(nill)";
+		str = "(null)";
 	for (i = 0 ; str[i]; i++)
 		_putchar(str[i]);
 	return (i);
