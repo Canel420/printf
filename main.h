@@ -32,5 +32,6 @@ int p_str(va_list s);
 int p_int(va_list i);
 int p_dec(va_list d);
 int p_str_r(va_list r);
+int p_int_b(va_list b);
 
 #endif /* MAIN_H */

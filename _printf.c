@@ -19,6 +19,7 @@ int (*convers(const char *fmt))(va_list)
 		{"i", p_int},
 		{"d", p_dec},
 		{"r", p_str_r},
+		{"b", p_int_b},
 		{NULL, NULL}
 	};
 
