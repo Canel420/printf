@@ -58,8 +58,6 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format && format[i]; i++)
 	{
-		/*if (format[i] == '\'' && format[i + 1] == 'n')
-			_putchar('\n');*/
 
 		if (format[i] == '%')
 		{
@@ -69,16 +67,13 @@ int _printf(const char *format, ...)
 				i++;
 				len++;
 			}
-			else if (!format[i + 1])
+			if (!format[i + 1])
+				return (-1);
+			f = convers(&format[i + 1]);
+			if (f != NULL)
 			{
-				return (-1); }
-			else
-			{
-				f = convers(&format[i + 1]);
-				if (f != NULL)
-				{
-					len += f(args);
-					i++; }
+				len += f(args);
+				i++;
 			}
 		}
 		else
