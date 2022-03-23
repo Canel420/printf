@@ -62,18 +62,24 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '%')
 			{
-				_putchar(format[i + 1]);
+				_putchar('%');
 				i++;
 				len++;
 			}
-			if (!format[i + 1])
-				return (-1);
-
-			f = convers(&format[i + 1]);
-			if (f != NULL)
+			else if (format[i + 1] == '\0')
 			{
-				len += f(args);
-				i++;
+				_putchar(format[i]);
+				len++;
+				return (len);
+			}
+			else
+			{
+				f = convers(&format[i + 1]);
+				if (f != NULL)
+				{
+					len += f(args);
+					i++;
+				}
 			}
 		}
 		else
