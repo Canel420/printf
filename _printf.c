@@ -56,9 +56,8 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
- 	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
-
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%')
@@ -69,6 +68,7 @@ int _printf(const char *format, ...)
 			}
 			if (!format[i + 1])
 				return (-1);
+
 			f = convers(&format[i + 1]);
 			if (f != NULL)
 			{
