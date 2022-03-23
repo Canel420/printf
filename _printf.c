@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int (*f)(va_list);
 
-	if (!format || (format[0] == '%' && format[1] == '\0'))
+	if (format == NULL)
 		return (-1);
 
 	va_start(args, format);
@@ -68,14 +68,16 @@ int _printf(const char *format, ...)
 				i++;
 				len++;
 			}
-			if (!format[i + 1])
-				return (-1);
-
-			f = convers(&format[i + 1]);
-			if (f != NULL)
+			else if (!format[i + 1])
 			{
-				len += f(args);
-				i++;
+				return (-1); }
+			else
+			{
+				f = convers(&format[i + 1]);
+				if (f != NULL)
+				{
+					len += f(args);
+					i++; }
 			}
 		}
 		else
