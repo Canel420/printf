@@ -56,14 +56,14 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	for (i = 0; format[i] != '\0'; i++)
+ 	for (i = 0; format[i] != '\0'; i++)
 	{
 
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%')
 			{
-				_putchar(format[i + 1]);
+				_putchar('%');
 				i++;
 				len++;
 			}
