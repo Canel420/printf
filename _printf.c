@@ -58,8 +58,8 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format && format[i]; i++)
 	{
-		if (format[i] == '\'' && format[i + 1] == 'n')
-			_putchar('\n');
+		/*if (format[i] == '\'' && format[i + 1] == 'n')
+			_putchar('\n');*/
 
 		if (format[i] == '%')
 		{
