@@ -1,4 +1,4 @@
-#include "main.h"
+ #include "main.h"
 
 /**
  * convers - Check if format elements is an specifier.
@@ -56,21 +56,19 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%')
 			{
-				_putchar('%');
+				_putchar(format[i]);
 				i++;
 				len++;
 			}
-			else if (format[i + 1] == '\0')
+			if (format[i + 1] == '\0')
 			{
-				_putchar(format[i]);
-				len++;
-				return (len);
+				len--;
 			}
 			else
 			{
