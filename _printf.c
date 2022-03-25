@@ -59,25 +59,21 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i]; i++)
 	{
 		if (format[0] == '%' && format[1] == '\0')
-		{
-			return(-1);
-		}
+			return (-1);
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%')
 			{
 				_putchar(format[i]);
 				i++;
-				len++;
-			}
+				len++; }
 			else
 			{
 				f = convers(&format[i + 1]);
 				if (f != NULL)
 				{
 					len += f(args);
-					i++;
-				}
+					i++; }
 				else
 				{
 					_putchar(format[i]);
@@ -86,8 +82,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
-			len++; }
-	}
+			len++; } }
 	va_end(args);
 	return (len);
 }
