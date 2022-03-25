@@ -61,7 +61,15 @@ to execute:  `./name_of_executable`
 
 ## Files Description
 
-
+| file  | description  |
+| ------------ | ------------ |
+|_printf.c   | Contain the main function of the _printf  |
+| Map.jpg  | Contain the printf project flowchart  |
+| _putchar.c  | Contains the function that allows directing the output to the terminal  |
+|  digits.c | Contains the function that print a decimal integer, the function that prints an integer, and the function that converts an unsigned number to binary  |
+| letters.c  | Contains the function that prints a character, the function that prints a string, and the function that prints a string backwards  |
+| main.h  |  Contain the struct and prototypes to the _printf function |
+| man_3_printf  |  Contain the man page of the _printf function with all its specifications |
 
 
 ## _printf By
