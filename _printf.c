@@ -58,6 +58,10 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i]; i++)
 	{
+		if (format[0] == '%' && format[1] == '\0')
+		{
+			return(-1);
+		}
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%')
