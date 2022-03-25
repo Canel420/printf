@@ -66,17 +66,19 @@ int _printf(const char *format, ...)
 				i++;
 				len++;
 			}
-			if (format[i + 1] == '\0')
-			{
-				len--;
-			}
 			else
 			{
 				f = convers(&format[i + 1]);
 				if (f != NULL)
 				{
 					len += f(args);
-					i++; } } }
+					i++;
+				}
+				else
+				{
+					_putchar(format[i]);
+					len++;
+				} } }
 		else
 		{
 			_putchar(format[i]);
