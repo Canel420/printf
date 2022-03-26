@@ -39,13 +39,28 @@ the parameters passed to printf() we know as arguments and we recognize them wit
 ## Main conversion control characters
 |operator|format|operator|format|
 | ------------ | ------------ | ------------ | ------------ |
-|%c|single character| %i  |  print same as "d", integer in base 10 |
-| %o  | unsigned octal integer  | %%  |  prints % character |
-| %x  |  unsigned hexadecimal integer | %f  |  floating point |
-| %u  | unsigned decimal integer | %s  | string of characters |
-|  %d | signed decimal integer  | %e  | scientific floating point  |
+| %c | single character | %i | print same as "d", integer in base 10 |
+| %r  | Prints a string in reverse  | %b | Convert an unsigned number to binary |
+| %d  | signed decimal integer | %s | string of characters |
 
 
+## Example Use
+
+**Simple program where we use $d, %i, %c and %s:**
+
+![](https://i.ibb.co/tXRP9tY/forredm.png)
+
+**The result on the screen is:**
+
+![](https://i.ibb.co/Wf9dgv6/forredm1.png)
+
+**Simple program where we use %b ():**
+
+![](https://i.ibb.co/hskbMLW/Sbinry1.png)
+
+**The result on the screen is:**
+
+![](https://i.ibb.co/wBMpcMs/Sbinry.png)
 
 ## Prototype
 This _printf function produces output according to a format:
