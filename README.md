@@ -46,7 +46,7 @@ the parameters passed to printf() we know as arguments and we recognize them wit
 
 ## Example Use
 
-**Simple program where we use $d, %i, %c and %s:**
+**Simple program where we use %d, %i, %c and %s:**
 
 ![](https://i.ibb.co/tXRP9tY/forredm.png)
 
